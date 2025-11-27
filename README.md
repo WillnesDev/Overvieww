@@ -1,3 +1,16 @@
+// Global enhancements: animations, icons, premium UI, hero gradient, contact backend
+// Fade/Slide animation utilities
+const fadeIn = "transition-all duration-700 ease-out opacity-0 translate-y-5 animate-[fadeIn_.7s_forwards]";
+
+// Hover glow utility
+const hoverGlow = "hover:shadow-[0_0_25px_rgba(0,150,255,0.4)] transition-shadow";
+
+// Premium hero gradient
+const heroGradient = "bg-gradient-to-br from-blue-500/20 via-cyan-400/10 to-purple-600/20";
+
+// Contact API endpoint
+const contactEndpoint = "/api/contact";
+
 # Project: willnes-portfolio (Next.js + Tailwind)
 
 Below are the files for a polished, modern portfolio built with Next.js and Tailwind CSS. Copy each file into your Next.js project (or create a new one with `npx create-next-app@latest willnes-portfolio --typescript` and then add Tailwind). This template includes a Home, Projects (redirects to willnes.vercel.app/projects), and Contact pages with modern UI (glassmorphism, subtle animations).
@@ -116,6 +129,28 @@ body{
 
 ```jsx
 import '../styles/globals.css'
+// Added extra projects
+  const extraProjects = [
+      {
+        title: "PaymentX Bot",
+        description: "To‘lov tizimlari bilan ishlaydigan billing va invoicing boti. Payme, Click va Stripe integratsiyasi.",
+        tags: ["Payments", "Automation", "Aiogram"],
+        link: "https://t.me/PaymentXRobot"
+      },
+      {
+        title: "SupportDesk Bot",
+        description: "AI yordamida avtomatik qo‘llab-quvvatlash xizmati. Smart savol-analiz va avtomatik javob berish.",
+        tags: ["AI", "Support", "NLP"],
+        link: "https://t.me/SupportDeskAIbot"
+      },
+      {
+        title: "TaskManager Bot",
+        description: "Deadline, reminder va progress tracking funksiyalariga ega vazifa boshqaruv boti.",
+        tags: ["Management", "Productivity", "Python"],
+        link: "https://t.me/TaskManagerProBot"
+      }
+  ];
+
 export default function App({ Component, pageProps }){
   return <Component {...pageProps} />
 }
